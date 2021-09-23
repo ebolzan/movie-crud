@@ -4,48 +4,12 @@
     <form [formGroup]="cadastro" (ngSubmit)="salvar()" (ngReset)="reiniciarForm()">
       <mat-card-content>
           <input-text titulo="Título *" [formGroup]="cadastro" controlName="titulo"></input-text>
-
           <input-text titulo="URL FOTO *" [formGroup]="cadastro" controlName="urlFoto"></input-text>
-
-          <mat-form-field class="full-width">
-              <input matInput [matDatepicker]="picker"
-              readonly
-              (click)="picker.open()"
-              name="dtLancamento"
-              formControlName="dtLancamento"
-              placeholder="Data de Lançamento *">
-              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-              <mat-datepicker #picker></mat-datepicker>
-              <mat-error *ngIf="validacao.hasErrorValidar(f.dtLancamento,'required')">Campo requerido</mat-error>
-            </mat-form-field>
-
+          <input-date titulo="Data de Lançamento*" [formGroup]="cadastro" controlName="dtLancamento"></input-date>
           <input-textarea titulo="Descrição" [formGroup]="cadastro" controlName="descricao"></input-textarea>
-
-
-          <mat-form-field class="full-width">
-            <input matInput placeholder="Nota IMDb *"
-            min="0"
-            max="10"
-            step="0.1"
-            type="number"
-            name="nota" formControlName="nota">
-          </mat-form-field>
-          <mat-error *ngIf="validacao.hasErrorValidar(f.nota,'required')">Campo requerido</mat-error>
-          <mat-error *ngIf="validacao.hasErrorValidar(f.nota,'min')">Campo precisa ter no mínimo o valor 0</mat-error>
-          <mat-error *ngIf="validacao.hasErrorValidar(f.nota, 'max')">Campo pode ter no máximo o valor 10</mat-error>
-
+          <input-number titulo="Nota IMDb*" [formGroup]="cadastro" step="0.1" controlName="nota"></input-number>
           <input-text titulo="Link IMDb" [formGroup]="cadastro" controlName="urlIMDb"></input-text>
-
-          <mat-form-field class="full-width">
-            <mat-select placeholder="Gênero *"  formControlName="genero">
-              <mat-option value="Ação">Açao</mat-option>
-              <mat-option value="Aventura">Aventura</mat-option>
-              <mat-option value="Ficção Científica">Ficção Científica</mat-option>
-              <mat-option value="Romance">Romance</mat-option>
-              <mat-option value="Terror">Terror</mat-option>
-            </mat-select>
-            <mat-error *ngIf="validacao.hasErrorValidar(f.genero, 'required')">Campo requerido</mat-error>
-          </mat-form-field>
+          <input-select titulo="Gênero*" [formGroup]="cadastro" controlName="genero"></input-select>
         </mat-card-content>
         <mat-card-actions>
           <button type="submit" color="accent" mat-raised-button>Salvar</button>
