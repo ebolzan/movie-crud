@@ -1,7 +1,7 @@
 <mat-toolbar class="app-title">Cadastrar Filme</mat-toolbar>
 <div class="main-div">
   <mat-card class="center width50" >
-    <form [formGroup]="cadastro" (ngSubmit)="salvar()" (ngReset)="reiniciarForm()">
+    <form autocomplete="off" novalidate [formGroup]="cadastro" (ngSubmit)="salvar()" (ngReset)="reiniciarForm()">
       <mat-card-content>
           <input-text titulo="Título *" [formGroup]="cadastro" controlName="titulo"></input-text>
           <input-text titulo="URL FOTO *" [formGroup]="cadastro" controlName="urlFoto"></input-text>
@@ -9,7 +9,7 @@
           <input-textarea titulo="Descrição" [formGroup]="cadastro" controlName="descricao"></input-textarea>
           <input-number titulo="Nota IMDb*" [formGroup]="cadastro" step="0.1" controlName="nota"></input-number>
           <input-text titulo="Link IMDb" [formGroup]="cadastro" controlName="urlIMDb"></input-text>
-          <input-select titulo="Gênero*" [formGroup]="cadastro" controlName="genero"></input-select>
+          <input-select titulo="Gênero*" [opcoes]="generos" [formGroup]="cadastro" controlName="genero"></input-select>
         </mat-card-content>
         <mat-card-actions>
           <button type="submit" color="accent" mat-raised-button>Salvar</button>
