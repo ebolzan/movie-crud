@@ -139,6 +139,36 @@
       "urlIMDb": "dasdsadsadasdaddasd",
       "genero": "Romance",
       "id": 14
+    },
+    {
+      "titulo": "meu copo novo",
+      "urlFoto": "dsadadaskl",
+      "dtLancamento": "2021-10-11T03:00:00.000Z",
+      "descricao": "copo de cerveja",
+      "nota": 7,
+      "urlIMDb": "dasdasdsadasdasd",
+      "genero": "Romance",
+      "id": 15
+    },
+    {
+      "titulo": "mer da",
+      "urlFoto": "",
+      "dtLancamento": "2021-10-12T03:00:00.000Z",
+      "descricao": "",
+      "nota": 0,
+      "urlIMDb": "",
+      "genero": "Romance",
+      "id": 16
+    },
+    {
+      "titulo": "dasds",
+      "urlFoto": "d",
+      "dtLancamento": "2021-10-05T03:00:00.000Z",
+      "descricao": "",
+      "nota": 0,
+      "urlIMDb": "",
+      "genero": "Romance",
+      "id": 17
     }
   ]
 }
